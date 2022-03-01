@@ -26,10 +26,11 @@ def inference(img):
     dictionary = dict(zip(labels, map(float, prediction)))
     return dictionary
 
-
+print("xyz")
 nbr_top_classes = 2
 gr.Interface(fn=inference, 
              inputs=gr.inputs.Image(), 
              outputs=gr.outputs.Label(num_top_classes=nbr_top_classes),
              theme="dark"
              ).launch(share=True) #, debug=True Use in Colab
+print("xyz"); 
